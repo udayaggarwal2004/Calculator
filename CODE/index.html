@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-orange-500 {
+        background-color: orange;
+      }
+      .bg-orange-500:hover {
+        background-color: rgb(226, 147, 1);
+      }
+      body {
+        background-image: url('background1.jpg');
+      }
+      .text-grad {
+        background: -webkit-linear-gradient(
+          rgb(252, 207, 49) 10%,
+          rgb(245, 85, 85) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body class="flex items-center justify-center h-screen bg-gray-100">
+    <div
+      class="px-8 pt-4 pb-8 text-lg text-gray-400 bg-black border-2 border-black 
+      rounded-lg shadow-lg placeholder:text-gray-200"
+    >
+      <h1 class="text-5xl text-center text-grad">Basic Calculator</h1>
+      <!-- Display Section -->
+      <input
+        type="text"
+        id="result"
+        class="w-full p-6 mb-4 text-3xl text-right text-white bg-black 
+        border border-gray-300 border-none rounded-lg outline-none focus:outline-none"
+        placeholder="0"
+        readonly
+      />
+
+      <!-- Input Section -->
+      <div class="grid grid-cols-4 gap-1">
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400"
+          onclick="clearResult()"
+        >
+          C
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400"
+          onclick="appendCharacter('(')"
+        >
+          (
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400"
+          onclick="appendCharacter(')')"
+        >
+          )
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-orange-500 rounded"
+          onclick="appendCharacter('/')"
+        >
+          /
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('7')"
+        >
+          7
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('8')"
+        >
+          8
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('9')"
+        >
+          9
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-orange-500 rounded"
+          onclick="appendCharacter('*')"
+        >
+          *
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('4')"
+        >
+          4
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('5')"
+        >
+          5
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('6')"
+        >
+          6
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-orange-500 rounded"
+          onclick="appendCharacter('-')"
+        >
+          -
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('1')"
+        >
+          1
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('2')"
+        >
+          2
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('3')"
+        >
+          3
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-orange-500 rounded"
+          onclick="appendCharacter('+')"
+        >
+          +
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('0')"
+        >
+          0
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="appendCharacter('.')"
+        >
+          .
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-300 bg-gray-500 rounded hover:bg-gray-400"
+          onclick="calculateResult()"
+        >
+          =
+        </button>
+        <button
+          class="px-8 py-6 font-bold text-gray-800 bg-orange-500 rounded"
+          onclick="appendCharacter('%')"
+        >
+          %
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+
